@@ -35,8 +35,8 @@ class App extends Component {
         socket.emit('message', message);
     }
 
-    handleUserSubmit(name) {
-        this.setState({users});
+    handleUserSubmit(name) {        
+        this.setState({name});
         socket.emit('join', name);
     }
 
@@ -56,7 +56,7 @@ class App extends Component {
                     </div>
                 </div>
                 <div className={styles.AppBody}>
-                    <UserList
+                    <UsersList
                         users={this.state.users}
                     />
                     <div className={styles.MessageWraper}>

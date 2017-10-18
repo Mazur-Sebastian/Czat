@@ -4,8 +4,8 @@ import styles from './UsersList.css';
 
 const UsersList = props => (
     <div className={styles.Users}>
-        <div className={styles.UsersOnLine}>
-            {props.users.length} people UsersOnLine
+        <div className={styles.UsersOnline}>
+            {props.users.length} people OnLine
         </div>
         <ul className={styles.UsersList}>
             {props.users.map((user) => {
@@ -13,8 +13,8 @@ const UsersList = props => (
                     <li key={user.id} className={styles.UserItem}>
                         {user.name}
                     </li>
-                );
-            })
+                    );
+                })
             }
         </ul>
     </div>
