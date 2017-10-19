@@ -5,7 +5,7 @@ import styles from './UserForm.css';
 class UserForm extends Component {
     constructor(props) {
         super(props);
-        this.state ={name: ''};
+        this.state = {name: ''};
     }
 
     handleSubmit(e) {

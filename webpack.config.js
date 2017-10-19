@@ -5,10 +5,8 @@ var UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 var OptimizeJsPlugin = require('optimize-js-plugin');
 
 module.exports = {
-    entry: (env !== 'production' ? [
-            'react-hot-loader/patch',
-            'webpack-dev-server/client?http://localhost:8080',
-            'webpack/hot/only-dev-server',
+    entry: (env !== 'production' ? [            
+            'webpack-dev-server/client?http://localhost:8080',            
         ] : []).concat(['./client/index.js']),
     output: {
         filename: 'bundle.js',
@@ -43,7 +41,7 @@ module.exports = {
         }),
         new webpack.optimize.UglifyJsPlugin(),
         new HtmlWebpackPlugin({
-            template: './index.html',
+            template: './client/index.html',
             filename: 'index.html',
             inject: 'body'
         })

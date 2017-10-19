@@ -1,6 +1,7 @@
 const express = require('express');
 const http = require('http');
 const socketIo = require('socket.io');
+const path = require('path');
 
 const app = express();
 const server = http.createServer(app);
@@ -9,10 +10,10 @@ const UsersService = require('./UsersService');
 
 const userService = new UsersService();
 
-app.use(express.static(__dirname + '/public'));
+app.use(express.static(path.resolve(__dirname, 'public')));
 
 app.get('/', function (req, res) {
-    res.sendFile(__dirname + '/index.html');
+    res.sendFile(__dirname + '/client/index.html');
 });
 
 io.on('connection', function(socket) {
@@ -49,6 +50,6 @@ io.on('connection', function(socket) {
     });
 });
 
-server.listen(3000, function () {
-    console.log('listening on *:3000');
+server.listen(8000, function () {
+    console.log('listening on *:8000');
 });

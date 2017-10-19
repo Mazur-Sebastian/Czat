@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "NODE_ENV=production webpack",
-    "start": "webpack-dev-server --inline --hot --config ./webpack.config.js"
+    "build": "webpack",
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
@@ -21,6 +21,7 @@
   "homepage": "https://github.com/zarigani1/Czat#readme",
   "dependencies": {
     "express": "^4.16.2",
+    "path": "^0.12.7",
     "socket.io": "^2.0.3"
   },
   "devDependencies": {
