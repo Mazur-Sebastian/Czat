@@ -1,5 +1,4 @@
 import React from 'react';
-
 import styles from './MessageList.css';
 
 const Message = props => (
@@ -11,7 +10,7 @@ const Message = props => (
 
 const MessageList = props => (
     <div className={styles.MessageList}>
-        {props.messages.map((message, i) =>{
+        {props.messages.map((message, i) => {
             return (
                 <Message
                     key={i}
@@ -19,6 +18,9 @@ const MessageList = props => (
                     text={message.text}
                 />
             );
-        })}
+        })
+        }
     </div>
 );
+
+export default MessageList;

@@ -33,7 +33,7 @@ io.on('connection', function(socket) {
 
 io.on('connection', function(socket) {
     socket.on('disconnect', () => {
-        userService.removeUSer(socket.id);
+        userService.removeUser(socket.id);
         socket.broadcast.emit('update', {
             users: userService.getAllUsers()
         });

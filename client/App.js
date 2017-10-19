@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import io from 'socket.io-client';
 import styles from './App.css';
-
 import MessageForm from './MessageForm';
 import MessageList from './MessageList';
 import UsersList from './UsersList';
@@ -59,7 +58,7 @@ class App extends Component {
                     <UsersList
                         users={this.state.users}
                     />
-                    <div className={styles.MessageWraper}>
+                    <div className={styles.MessageWrapper}>
                         <MessageList
                             messages={this.state.messages}
                         />
